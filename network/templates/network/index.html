@@ -1,0 +1,66 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+<div class="wrapper">
+	{% if user.is_authenticated %}
+	<div class="mainbody">
+		<div class="col2">
+			<div class="tweet-box-content">
+					<div class="tweet-box-input-inner">
+						<textarea id="content" required="required" placeholder="What's happening?"></textarea>
+					</div>
+
+					<div class="tweet-box-button ">
+						<button  id="tweet" type="button" class="btn btn-outline-primary">Tweet</button>
+					</div>
+			</div>
+		</div>
+	</div>
+
+	{% endif %}
+	<div class="lenta">
+		<div class="lenta_a">
+		{% for post in page_obj %}
+		<div class="post" id="Post id for append {{ post.id }}">
+
+			<div class="post_user_p">
+				<a href="/profile/{{ post.user_p }}"><strong>{{ post.user_p }}</strong></a>
+			</div>
+			{% if post.editable == "yes" %}
+			<div class="post_edit">
+				<button id="Id for edit button {{ post.id }}" class="btn btn-link" onclick="edit_post({{ post.id }})">Edit</button>
+			</div>
+			{% endif %}
+
+			<div class="post_body_first" id="Id for each edit {{ post.id }}">
+				<div class="post_body" id="Tweet id for edit {{ post.id }}">
+					{{ post.content }}
+				</div>
+			</div>
+
+			<div class="post_date">
+				{{ post.date_created }}
+			</div>
+
+			<div class="post_likes">
+				<img id="Like icon ID {{ post.id }}" class="like" src="https://pngimg.com/uploads/heart/heart_PNG51335.png" onclick="like_post({{ post.id }})">
+				<p id="{{ post.id }}" class="like_counter">{{ post.likes }}</p>
+			</div>
+		</div>
+		{% endfor %}
+		</div>
+	</div>
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+  	{% for num in page_obj.paginator.page_range %}
+    <li class="page-item"><a class="page-link" href="/?page={{ num }}">{{ num }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
+</div>
+{% endblock %}
+
+{% block script %}
+  <script src="{% static 'network/inbox.js' %}"></script>
+{% endblock %}

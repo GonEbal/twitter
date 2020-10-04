@@ -1,0 +1,262 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0px;
+	padding: 5px;
+	background-image: url("https://media.pixcove.com/T/5/8/Background-Contextual-Textures-Backgrounds-Donuts--2303.jpg");
+}
+
+.body {
+	padding: 8px;
+}
+
+.transparent_back {
+	background-color: rgba(0, 0, 0, 0.3);
+	width: 60%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.pagination {
+	padding-left: 45%;
+}
+
+.btn-link {
+	padding: 0px 0px;
+    font-size: 16px;
+    border-radius: 6px;
+}
+.btn-outline-success {
+	margin-left: 1%;
+	padding: 3px 6px;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+
+.wrapper {
+	height: auto;
+	overflow: hidden;
+}
+
+.mainbody {
+	width: auto;
+	height: auto;
+	overflow: hidden;
+}
+
+.col2 {
+	width: 512px;
+	height: 240px;
+	margin: 0 auto;
+	margin-top: 0.5%;
+	background-color: #C2EDFF;
+	border-radius: 15px;
+}
+
+.tweet-box-content {
+	height: 100%;
+	width: 100%;
+	border-radius: 15px;
+	padding: 10px;
+}
+
+
+.tweet-box-input-inner {
+	background-color: white;
+	height: 70%;
+	width: 80%;
+	border-radius: 15px;
+	border: 3px solid #98d8ff
+}
+
+
+.tweet-box-button {
+	height: 18%;
+	width: 100%;
+	margin-top: 15px;
+}
+
+#tweet {
+	margin-left: 2%;
+	border-radius: 20px;
+}
+
+
+textarea {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
+
+.lenta {
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+.lenta_a {
+	background-color: #FFAC75;
+	width: 512px;
+	margin: 0 auto;
+	height: auto;
+	border-radius: 8px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.post {
+	background-color: #DFEDFF;
+	height: auto;
+	width: auto;
+	border-radius: 8px;
+	margin: 5px;
+}
+
+.post_body {
+	margin-left: 1%;
+}
+
+.post_date {
+	margin-left: 1%;
+}
+
+.post_likes {
+	margin-left: 1%;
+	display: flex;
+}
+
+p {
+	margin: 0;
+}
+
+.post_user_p {
+	margin-left: 1%;
+}
+
+.like {
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.post_edit {
+	margin-left: 1%;
+}
+
+.profile-box {
+	width: 510px;
+	height: 200px;
+	background-color: #C2EDFF;
+	border-radius: 10px;
+	margin: 0 auto;
+}
+
+.profile-username_outter {
+	width: 100%;
+	height: 60px;
+	padding: 14px;
+}
+
+.profile-username {
+	width: 150px;
+	height: 40px;
+	background-color: #A5B3E8;
+	margin: 0 auto;
+	border-radius: 10px;
+	text-align: center;
+	padding-top: 4px;
+}
+
+.profile-username-name{
+	font-size: 20px;
+	color: white;
+	font-weight: bold;
+}
+
+.Follow_outter {
+	width: 100%;
+	height: 60px;
+	padding: 20px;
+}
+
+.Follow {
+	width: 160px;
+	height: 30px;
+	background-color: #EB4148;
+	margin: 0 auto;
+	border-radius: 18px;
+	cursor: pointer;
+}
+.Unfollow {
+	width: 160px;
+	height: 30px;
+	background-color: #A5B3E8;
+	margin: 0 auto;
+	border-radius: 18px;
+	cursor: pointer;
+}
+
+.follow_text {
+	color: white;
+	font-size: 20px;
+	text-align: center;
+}
+
+.profile-info {
+	height: 70px;
+	width: auto;
+	background-color: #A5E8DB;
+	overflow: hidden;
+	margin: 5px;
+	border-radius: 10px;
+}
+
+.profile-posts {
+	width: 31%;
+	height: 30px;
+	float: left;
+	margin: 5px;
+}
+
+.profile-followers {
+	width: 31%;
+	height: 30px;
+	float: left;
+	margin: 5px;
+}
+
+.profile-following {
+	width: 31%;
+	height: 30px;
+	float: left;
+	margin: 5px;
+}
+
+.posts_count {
+	font-size: 20px;
+	text-align: center;
+}
+
+.followers_count {
+	font-size: 20px;
+	text-align: center;
+}
+
+.following_count {
+	font-size: 20px;
+	text-align: center;
+}
+
+.p_count {
+	width: 31%;
+	height: 30px;
+	float: left;
+	margin: 5px;
+	text-align: center;
+	font-weight: bold;
+	color: #415C56;
+	position: relative;
+	top: -7px;
+}

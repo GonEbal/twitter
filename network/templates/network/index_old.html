@@ -1,0 +1,56 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+	<div class="wrapper">
+		{% if user.is_authenticated %}
+		<div class="mainbody">
+			<div class="col2">
+				<div>
+					<div class="tweet-box-content">
+							<div class="tweet-box-input-inner">
+								<textarea id="content" placeholder="What's happening?"></textarea>
+							</div>
+						<div class="tweet-box-bar ">
+							<button  id="tweet" type="button" class="btn btn-outline-primary">Tweet</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% endif %}
+
+			<div class="lenta">
+				{% for post in posts %}
+				<div class="post">
+					<div class="post_user_p">
+						<a href="/profile/{{ post.user_p.id }}"><strong>{{ post.user_p }}</strong></a>
+					</div>
+
+					<div class="post_edit">
+						<a href="#" class="post_edit_button">Edit</a>
+					</div>
+
+					<div class="post_body">
+						{{ post }}
+					</div>
+
+					<div class="post_date">
+						{{ post.date_created }}
+					</div>
+
+					<div class="post_likes">
+							<img class="like" src="https://pngimg.com/uploads/heart/heart_PNG51335.png">
+						<p id="{{ post.id }}" class="like_counter">{{ post.likes }}</p>
+					</div>
+
+				</div>
+				{% endfor %}
+			</div>
+
+	</div>
+{% endblock %}
+
+{% block script %}
+  <script src="{% static 'network/inbox.js' %}"></script>
+{% endblock %}

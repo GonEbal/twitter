@@ -1,0 +1,76 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+
+{% block body %}
+ <div class="profile-box">
+ 	<div class="profile-username_outter">
+	 	<div class="profile-username">
+	 		<p class="profile-username-name"></p>
+	 	</div>
+ 	</div>
+ 	<div class="Follow_outter">
+	 	<div class="Follow">
+	 		<p id="followunfollow" class="follow_text">Follow</p>
+	 	</div>
+	</div>
+ 	<div class="profile-info">
+ 		<div class="profile-posts">
+ 			<p class="posts_count">Posts</p>
+ 		</div>
+ 	
+ 		<div class="profile-followers">
+ 			<p class="followers_count">Followers</p>
+ 		</div>
+ 		<div class="profile-following">
+ 			<p class="following_count">Following</p>
+ 		</div>
+ 		<div class="p_count" id="posts_count">
+ 			<p class="pt_count"></p>
+ 		</div>
+ 		<div class="p_count" id="followers_count">
+ 			<p class="f_count"></p>
+ 		</div>
+ 		<div class="p_count" id="following_count">
+ 			<p class="fl_count"></p>
+ 		</div>
+ 	</div>
+ </div>
+ <div class="lenta">
+		<div class="lenta_a">
+		{% for post in page_obj %}
+		<div class="post" id="Post id for append {{ post.id }}">
+
+			<div class="post_user_p">
+				<a href="/profile/{{ post.user_p }}"><strong>{{ post.user_p }}</strong></a>
+			</div>
+			{% if post.editable == "yes" %}
+			<div class="post_edit">
+				<button id="Id for edit button {{ post.id }}" class="btn btn-link" onclick="edit_post({{ post.id }})">Edit</button>
+			</div>
+			{% endif %}
+
+			<div class="post_body_first" id="Id for each edit {{ post.id }}">
+				<div class="post_body" id="Tweet id for edit {{ post.id }}">
+					{{ post.content }}
+				</div>
+			</div>
+
+			<div class="post_date">
+				{{ post.date_created }}
+			</div>
+
+			<div class="post_likes">
+				<img id="Like icon ID {{ post.id }}" class="like" src="https://pngimg.com/uploads/heart/heart_PNG51335.png" onclick="like_post({{ post.id }})">
+				<p id="{{ post.id }}" class="like_counter">{{ post.likes }}</p>
+			</div>
+		</div>
+		{% endfor %}
+		</div>
+	</div>
+{% endblock %}
+
+
+{% block script %}
+  <script src="{% static 'network/profile.js' %}"></script>
+{% endblock %}
