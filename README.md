@@ -4,7 +4,7 @@
 
 The goal of this project was to create copy of twitter written on Django.
 
-![preview](_screenshots/preview.png?raw=true "Title")
+![preview](_screenshots/preview.gif?raw=true "Title")
 
 ### Main features
 
